@@ -16,7 +16,7 @@ const Lightbox = ({onClose}) => {
             </div>
             <div className="bg-[#0000002b]  p-8 rounded-lg">
                 <div className='flex justify-center'>
-                    <iframe title="YouTube video player" className="h-screen w-[1024px]" src="https://www.youtube.com/embed/Wh0q8vdH-ro?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe title="YouTube video player" src="https://www.youtube.com/embed/Wh0q8vdH-ro?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
 
                 <button className="text-white rounded"

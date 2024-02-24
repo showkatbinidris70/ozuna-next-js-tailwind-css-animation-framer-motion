@@ -75,7 +75,7 @@ export default function Home() {
               <div className="relative">
                 <Image
                   src={ImgLightBox}
-                  className="2xl:w-[1034px] 2xl:h-[582px]"
+                  // className="2xl:w-[1034px] 2xl:h-[582px]"
                 />
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
