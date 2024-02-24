@@ -121,7 +121,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className="container mx-auto px-1 md:px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="container mx-auto px-1 md:mt-16 md:px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="text-3xl font-extrabold text-white text-center">
               OZUNA{" "}
               <span className="ps-2 text-3xl font-medium text-white">

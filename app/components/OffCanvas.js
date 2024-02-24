@@ -27,23 +27,41 @@ export default function OffCanvas() {
 
       <div className="">
         <div
-          className={`fixed left-0 z-100 top-24 w-2/5 bg-gray-900 z-50 text-white transition-transform duration-300 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+          className={`fixed left-0 z-20 top-0 w-2/5 bg-gray-900 text-white transition-transform duration-300 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
         >
           <div className="flex gap-2">
-            <div className="w-2/5 bg-white">
+            <div className="w-2/5 bg-white ps-5">
+              <div className="pb-5 pt-12 ps-5 text-black">
+                {isOpen && (
+                  <div
+                    className="opacity-50 z-100"
+                    onClick={toggleMenu}
+                  ></div>
+                )}
+                <button
+                  className="text-black p-2 rounded flex items-center z-100"
+                  onClick={toggleMenu}
+                >
+                  {isOpen ? (
+                    <ImCross className="text-2xl pe-2" />
+                  ) : (
+                    <IoReorderThreeOutline className="text-2xl" />
+                  )}
+                  {isOpen ? "PRODUCTS" : "PRODUCTS"}
+                </button>
+              </div>
               <ul className="text-lg text-black font-normal ps-5">
-                <li className="p-2"><Link href="#" className="text-[#7f1d1d]">All Appel</Link></li>
-                <li className="p-2"><Link href="#">Cosmo</Link></li>
-                <li className="p-2"><Link href="#">Ozutochi</Link></li>
-                <li className="p-2"><Link href="#">Enoc</Link></li>
-                <li className="p-2"><Link href="#">Flash Sale</Link></li>
-
+                <li className="p-1"><Link href="#" className="text-red-900">All Appel</Link></li>
+                <li className="p-1"><Link href="#">Cosmo</Link></li>
+                <li className="p-1"><Link href="#">Ozutochi</Link></li>
+                <li className="p-1"><Link href="#">Enoc</Link></li>
+                <li className="p-1"><Link href="#">Flash Sale</Link></li>
               </ul>
             </div>
-            <div className="w-3/5 bg-[#000000a8] p-5">
-              <div className="my-5 md:my-0 w-full">
-                <div class="relative group">
+            <div className="w-3/5 bg-[#000000a8] p-5 pt-24 scroll-smooth">
+              <div className="md:my-0 w-full">
+                <div class="relative my-5 group">
                   <Image src={ImgMarkGroup1} className="rounded-2xl" />{" "}
                   <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full rounded-2xl"></div>
                   <div class="absolute top-0 left-0 w-full h-full flex items-end opacity-100">
@@ -80,8 +98,8 @@ export default function OffCanvas() {
                 </div>
               </div>
 
-              <div className="my-5 md:my-0 w-full">
-                <div class="relative group">
+              <div className="md:my-0 w-full">
+                <div class="relative my-5 group">
                   <Image src={ImgMarkGroup1} className="rounded-2xl" />{" "}
                   <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full rounded-2xl"></div>
                   <div class="absolute top-0 left-0 w-full h-full flex items-end opacity-100">
@@ -117,8 +135,8 @@ export default function OffCanvas() {
                   </div>
                 </div>
               </div>
-              <div className="my-5 md:my-0 w-full">
-                <div class="relative group">
+              <div className="md:my-0 w-full">
+                <div class="relative my-5 group">
                   <Image src={ImgMarkGroup1} className="rounded-2xl" />{" "}
                   <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full rounded-2xl"></div>
                   <div class="absolute top-0 left-0 w-full h-full flex items-end opacity-100">
@@ -156,21 +174,22 @@ export default function OffCanvas() {
               </div>
             </div>
           </div>
+
         </div>
         {isOpen && (
           <div
-            className="opacity-50 z-1000"
+            className="opacity-50 z-100"
             onClick={toggleMenu}
           ></div>
         )}
         <button
-          className="text-white p-2 rounded flex items-center"
+          className="text-white p-2 rounded flex items-center z-100"
           onClick={toggleMenu}
         >
           {isOpen ? (
-            <ImCross className="text-2xl text-white pe-2" />
+            <ImCross className="text-2xl text-white pe-2 z-100" />
           ) : (
-            <IoReorderThreeOutline className="text-2xl text-white" />
+            <IoReorderThreeOutline className="text-2xl text-white z-100" />
           )}
           {isOpen ? "PRODUCTS" : "PRODUCTS"}
         </button>
