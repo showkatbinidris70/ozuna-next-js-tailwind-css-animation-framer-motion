@@ -9,9 +9,6 @@ import Link from "next/link";
 import SearchModal from "./SearchModal";
 import OffCanvas from "./OffCanvas";
 
-
-
-
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -29,17 +26,13 @@ export default function Navbar() {
         <div className="container mx-auto px-1 md:px-5">
           <div className="flex justify-between items-center">
             <div className="flex gap-1 items-center">
-              {/* <IoReorderThreeOutline className="text-2xl text-white" /> */}
-              {/* <p className="text-sm md:text-2xl font-light text-white">
-                PRODUCTS
-              </p> */}
-             <OffCanvas/>
+              <OffCanvas />
             </div>
-
             <div className="relative hidden">
               <div
-                className={`fixed inset-y-0 left-0 w-64 bg-gray-900 text-white transition-transform duration-300 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
-                  }`}
+                className={`fixed inset-y-0 left-0 w-64 bg-gray-900 text-white transition-transform duration-300 transform ${
+                  isOpen ? "translate-x-0" : "-translate-x-full"
+                }`}
               >
                 <div className="p-4">
                   <h2 className="text-xl font-bold">Menu</h2>
@@ -95,15 +88,11 @@ export default function Navbar() {
               </button>
             </div>
 
-
-
-
-
             <div className="">
               <Image src={Logo} className="w-[70px] md:w-48" />
             </div>
             <div className="flex gap:1 md:gap-3">
-              <div className="text-white md:border-r pr-3">ESPAÑOL</div>
+              <div className="text-white md:border-r px-1">ESPAÑOL</div>
               <div className="px-1">
                 <Link href="#" onClick={toggleModal}>
                   <Image src={Search} />
@@ -121,14 +110,14 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className="container mx-auto px-1 md:mt-16 md:px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="container mx-auto px-1 mt-12 md:mt-16 md:px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="text-3xl font-extrabold text-white text-center">
               OZUNA{" "}
               <span className="ps-2 text-3xl font-medium text-white">
                 OFFICIAL STORE
               </span>
             </div>
-            <div className="text-4xl md:text-6xl font-light text-white text-center mb-10 mt-5">
+            <div className="text-4xl md:text-5xl lg:text-6xl font-light text-white text-center mb-10 mt-5">
               PRE-ORDER COSMO MERCH
             </div>
             <div className="text-center my-1">

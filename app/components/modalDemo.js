@@ -1,31 +1,20 @@
-"use client";
 import React, { useState } from "react";
 
-export default function SearchModal({ isOpen, onClose }) {
+function SearchModal({ isOpen, onClose }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = () => {
     // Handle search logic here
     console.log("Searching for:", searchTerm);
   };
+
   return (
-    <div>
-      {/* <div className="fixed inset-0 flex items-center justify-center bg-[#000000da]">
-        <div className="w-1/2 flex justify-center">
-          <input
-            type="text"
-            className="w-full border border-white px-3 py-8 outline-none bg-[#ffffff8a] rounded-full"
-            placeholder="SEARCH PRODUCTS"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-      </div> */}
+    <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
-          <div className="w-full md:w-1/2 mx-5">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg p-8 w-96">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold"></h2>
+              <h2 className="text-lg font-bold">Search</h2>
               <button
                 className="text-gray-500 hover:text-gray-700"
                 onClick={onClose}
@@ -48,14 +37,42 @@ export default function SearchModal({ isOpen, onClose }) {
             </div>
             <input
               type="text"
-              className="w-full border border-white px-3 py-4 md:py-8 outline-none bg-[#ffffffc4] rounded-full placeholder-black text-xl font-light"
-              placeholder="SEARCH PRODUCTS"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:border-blue-500"
+              placeholder="Search..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
+            <button
+              className="mt-4 w-full bg-blue-500 text-white rounded-md py-2"
+              onClick={handleSearch}
+            >
+              Search
+            </button>
           </div>
         </div>
       )}
+    </>
+  );
+}
+
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  return (
+    <div className="min-h-screen flex justify-center items-center">
+      <button
+        className="bg-blue-500 text-white rounded-md py-2 px-4"
+        onClick={toggleModal}
+      >
+        Open Search Modal
+      </button>
+      <SearchModal isOpen={isModalOpen} onClose={toggleModal} />
     </div>
   );
 }
+
+export default App;

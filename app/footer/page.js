@@ -8,7 +8,7 @@ export default function FooterPage() {
         <div>
             <div className="container mx-auto px-5">
                 <div className="">
-                    <h2 className="text-center font-extrabold text-black text-2xl md:text-3xl">
+                    <h2 className="text-center font-extrabold text-black text-2xl md:text-3xl pt-5">
                         JOIN OUR MAILING LIST
                     </h2>
                     <div class="flex justify-center mt-5 md:mt-10">

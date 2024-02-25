@@ -42,11 +42,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-image-1 bg-no-repeat bg-right bg-auto py-52">
+      <div className="bg-image-1 bg-no-repeat bg-right bg-auto py-20 md:py-32 lg:py-32 xl:py-52">
         <div className="container mx-auto px-5">
           <div className="md:flex gap-4 items-center justify-between">
             <div className="w-full md:w-2/5 py-3 md:py-1">
-              <h2 className="text-5xl md:text-5xl xl:text-7xl  text-[#242F3D] font-bold">
+              <h2 className="text-4xl md:text-3xl xl:text-7xl  text-[#242F3D] font-bold">
                 Anuel AA & Ozuna - Los Dioses CD
               </h2>
               <h5 className="text-[#242F3D] text-2xl py-4 font-semibold">
@@ -73,16 +73,8 @@ export default function Home() {
             </div>
             <div className="w-full md:w-3/5 py-3 md:py-1">
               <div className="relative">
-                <Image
-                  src={ImgLightBox}
-                  // className="2xl:w-[1034px] 2xl:h-[582px]"
-                />
-
+                <Image src={ImgLightBox} />
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  {/* <a href="#">
-                                    <Image src={ImgLightBoxBtn}
-                                        className="flex justify-center"/>
-                                </a> */}
                   <button className="" onClick={handleOpenLightbox}>
                     <Image
                       src={ImgLightBoxBtn}
@@ -98,7 +90,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-image-2 bg-no-repeat bg-left-bottom bg-auto pb-20 pt-48">
+      <div className="bg-image-2 bg-no-repeat bg-left-bottom bg-auto pb-10 pt-32 md:pb-20 md:pt-24 lg:md:pt-36 xl:md:pt-48">
         <div className="container mx-auto px-5">
           <Tabs>
             <Tab label="OZUTOCHI">
@@ -1038,7 +1030,7 @@ export default function Home() {
           </Tabs>
         </div>
       </div>
-      <div className="bg-image-3 bg-no-repeat bg-right bg-auto py-64">
+      <div className="bg-image-3 bg-no-repeat bg-right bg-auto py-20 md:py-20 lg:py-24 xl:py-64">
         <div className="container mx-auto  px-5">
           <div className="md:flex gap-4 items-center justify-between bg-[#030303] rounded-2xl">
             <div className="w-full md:w-3/5 py-5 md:py-0">
