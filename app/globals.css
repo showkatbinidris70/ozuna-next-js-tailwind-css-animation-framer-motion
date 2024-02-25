@@ -3,41 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --color-dark: #000;
+  --color-dark            : #000;
   --background-color-white: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb      : 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb  : 0, 0, 0;
   }
 }
 
 body {
-  color: var(--color-dark);
+  color           : var(--color-dark);
   background-color: var(--background-color-white);
 }
 
 ul li:last-child {
   border: none;
 }
+
 @media screen and (max-width: 639px) {
   .lightbox-video {
     height: 380px;
   }
 }
+
 @media screen and (max-width: 575px) {
   .lightbox-video {
     height: 300px;
   }
 }
+
 @media screen and (max-width: 375px) {
   .lightbox-video {
     height: 220px;
   }
 }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
